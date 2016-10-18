@@ -49,6 +49,10 @@ You can run the app on the desktop via:
 
 Not sure if default permisisons wil allow it to load... needs more testing.
 
+Possible solution:
+
+  xattr -d -r com.apple.quarantine Pwnd.app
+
 Volume etc:
 -----------
 Turn up the volume:
